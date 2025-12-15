@@ -3,8 +3,10 @@ import axios from 'axios'
 
 function App() {
 
-  function getPostTitle(id){
-    console.log("funzione chiamata", id)
+  function getPostTitle(id) {
+    axios.get('https://dummyjson.com/posts/1')
+    .then(response => console.log(response.data))
+    .catch(error => console.log(error) )
   }
 
 
