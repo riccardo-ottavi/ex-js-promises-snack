@@ -1,6 +1,14 @@
 import './App.css'
+import axios from 'axios'
 
 function App() {
+
+  function getPostTitle(id){
+    console.log("funzione chiamata", id)
+  }
+
+
+  getPostTitle(4);
 
   return (
     <>
