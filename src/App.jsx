@@ -7,14 +7,14 @@ function App() {
     const dataFetch = new Promise((resolve, reject) => {
       axios.get(`https://dummyjson.com/posts/${id}`)
         .then(response => response.data)
-        .then(obj => resolve(obj))
+        .then(obj => resolve(obj.title))
         .catch(reject)
     })
     return dataFetch
   }
 
 
-  getPostTitle(2)
+  getPostTitle(1)
   .then(obj => console.log(obj))
   .catch(error => console.log(error))
 
